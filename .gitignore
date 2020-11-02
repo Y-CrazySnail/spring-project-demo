@@ -1,0 +1,5 @@
+/.idea/
+/auth-server/target/
+/client-password/target/
+/common/target/
+/*.iml
