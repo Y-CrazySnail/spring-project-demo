@@ -17,12 +17,8 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/user")
 public class UserController extends BaseController<User> {
 
-    private final IUserService usersService;
-
-    public UserController(IService<User> service, IUserService usersService) {
-        super(service);
-        this.usersService = usersService;
-    }
+    @Autowired
+    private IUserService usersService;
 
     /**
      * @param user 用户

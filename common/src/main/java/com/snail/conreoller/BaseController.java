@@ -11,12 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 public class BaseController<T extends BaseEntity> {
 
-    private final IService<T> service;
-
     @Autowired
-    public BaseController(IService<T> service) {
-        this.service = service;
-    }
+    private IService<T> service;
 
     @GetMapping("getById")
     public ResponseEntity<Object> getById(Long id) {
